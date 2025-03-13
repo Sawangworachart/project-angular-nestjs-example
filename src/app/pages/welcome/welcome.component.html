@@ -1,0 +1,88 @@
+<div class="flex w-full">
+    <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">Username</nz-form-label>
+            <nz-form-control [nzSpan]="18">
+                <input nz-input formControlName="username" placeholder="Enter username" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">Position</nz-form-label>
+            <nz-form-control [nzSpan]="18">
+                <input nz-input formControlName="position" placeholder="Enter position" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">Email</nz-form-label>
+            <nz-form-control [nzSpan]="18">
+                <input nz-input formControlName="email" type="email" placeholder="Enter email" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">Phone</nz-form-label>
+            <nz-form-control [nzSpan]="18">
+                <input nz-input formControlName="phone" placeholder="Enter phone number" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">Leave Types</nz-form-label>
+            <nz-form-control [nzSpan]="18">
+                <input nz-input formControlName="leaveTypes" placeholder="Enter leave type" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">Sick Leave</nz-form-label>
+            <nz-form-control [nzSpan]="18">
+                <label nz-checkbox formControlName="sick1">Sick 1</label>
+                <label nz-checkbox formControlName="sick2">Sick 2</label>
+                <label nz-checkbox formControlName="sick3">Sick 3</label>
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">Others</nz-form-label>
+            <nz-form-control [nzSpan]="18">
+                <input nz-input formControlName="others" placeholder="Enter others" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">Remarks</nz-form-label>
+            <nz-form-control [nzSpan]="18">
+                <input nz-input formControlName="remarks" placeholder="Enter remarks" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">Date Sick</nz-form-label>
+            <nz-form-control [nzSpan]="18">
+                <input nz-input formControlName="dateSick" type="date" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">Date Create</nz-form-label>
+            <nz-form-control [nzSpan]="18">
+                <input nz-input formControlName="dateCreate" type="date" required />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="6">Status</nz-form-label>
+            <nz-form-control [nzSpan]="18">
+                <input nz-input formControlName="status" placeholder="Enter status" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-control [nzSpan]="24">
+                <button nz-button nzType="primary" [disabled]="!userForm.valid">Submit</button>
+            </nz-form-control>
+        </nz-form-item>
+    </form>
+</div>
